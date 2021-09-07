@@ -1,0 +1,56 @@
+<div class="login">
+  <div class="card">
+    <div class="card-body">
+      <!-- <h5 class="card-title text-center">Login Assignment</h5> -->
+      <!-- <hr> -->
+      <form [formGroup]="loginFormGroup" (ngSubmit)="onLoginSubmit()">
+        <div class="card mb-3" *ngIf="errorMessage">
+          <div class="card-body text-center">
+            <span class="text-danger">
+              <strong>{{errorMessage}}</strong>
+            </span>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="email"
+            [ngClass]="{'form-control': true, 'is-invalid': isSubmitted && (loginFormGroup.controls['username'].hasError('required') || loginFormGroup.controls['username'].hasError('email'))}"
+            id="username" placeholder="Enter your username" formControlName="username" required #username>
+          <div id="username-error-msg" class="invalid-feedback mt-2"
+            *ngIf="isSubmitted && loginFormGroup.controls['username'].hasError('required')">
+            Please enter username.</div>
+          <div id="username-error-msg" class="invalid-feedback mt-2"
+            *ngIf="isSubmitted && loginFormGroup.controls['username'].hasError('email')">
+            Please enter correct username.</div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password"
+            [ngClass]="{'form-control': true, 'is-invalid': isSubmitted && (loginFormGroup.controls['password'].hasError('required') || (loginFormGroup.controls['password'].hasError('minlength') || loginFormGroup.controls['password'].hasError('maxlength')))}"
+            id="password" placeholder="Enter your password" formControlName="password" required>
+          <div id="password-error-msg1" class="invalid-feedback mt-2"
+            *ngIf="isSubmitted && loginFormGroup.controls['password'].hasError('required')">
+            Please enter password.</div>
+          <div id="password-error-msg2" class="invalid-feedback mt-2"
+            *ngIf="isSubmitted && (loginFormGroup.controls['password'].hasError('minlength') || loginFormGroup.controls['password'].hasError('maxlength'))">
+            Please enter a valid password (Password should be between {{passwordMinLength}} and {{passwordMaxLength}}).
+          </div>
+        </div>
+        <div class="mt-4 d-grid">
+          <button class="btn btn-primary btn-block" id="login">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- <div class="mt-4">
+    <h3>Sample user to login.</h3>
+    <code>
+      <div>
+        Username: <strong>test</strong>
+      </div>
+      <div>
+        Password: <strong>test@123</strong>
+      </div>
+    </code>
+  </div> -->
+</div>
