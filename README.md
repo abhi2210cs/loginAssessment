@@ -32,31 +32,17 @@ Run `npm run code-coverage`
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## What to improve
-1. Need to improve the UI
+1. Login page has to improve
 2. Authentication need to be done
 3. Unit testing feature need to improve
-4. Show them the password to verify
-5. Remember users credential
+4. Show eye icon to verify password
+5. Remember user
 6. Make Password recovery
-7. Using Color To Manage Attention. Color can also be used toeffectively focus your visitors’ attention on important or actionableelements
+7. Using Color To Manage Attention. Color can also be used to effectively focus your visitors’ attention on important or actionableelements
 8. Custom input focus
 9. Integration with backend
 10. Password encryption should be used while submitting to the backend service post request.
 11. While storing the value into sessionStorage, should be decrypted that value.
-
-<!-- Run the project -->
-Command to Run the project --> npm start
-
-<!-- Test project -->
-Command to Test project --> ng test
-
-<!-- Build Steps -->
-Command to Build
-1. git status
-2. git add .
-3. git commit -m "message"
-4. git push origin master
-
 
 ## Further help
 

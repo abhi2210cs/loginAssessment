@@ -20,10 +20,10 @@ export const routes: Routes = [
     pathMatch: 'full',
     redirectTo: 'login'
   },
-  {
-    path: '**',
-    component: PageNotFoundComponent
-  }
+  // {
+  //   path: '**',
+  //   component: PageNotFoundComponent
+  // }
 ];
 
 @NgModule({
